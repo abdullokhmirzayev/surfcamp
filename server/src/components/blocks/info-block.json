@@ -25,7 +25,7 @@
     "cta": {
       "type": "component",
       "component": "elements.link",
-      "repeatable": true
+      "repeatable": false
     },
     "theme": {
       "type": "enumeration",
