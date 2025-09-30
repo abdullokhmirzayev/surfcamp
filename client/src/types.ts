@@ -52,3 +52,21 @@ export interface InfoBlockProps extends Base<'blocks.info-block'> {
 	image: ImageProps
 	cta?: LinkProps
 }
+export interface LinkProps {
+	id: number
+	text: string
+	href: string
+	isExternal: boolean
+}
+
+export interface ImageProps {
+	id: number
+	documentId: string
+	url: string
+	alternativeText: string
+}
+
+export interface LogoProps {
+	logoText: string
+	image: ImageProps
+}

@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_layout_headers",
+  "collectionName": "components_layout_footers",
   "info": {
-    "displayName": "Header"
+    "displayName": "Footer"
   },
   "options": {},
   "attributes": {
@@ -15,10 +15,13 @@
       "component": "elements.link",
       "repeatable": true
     },
-    "cta": {
+    "policies": {
       "type": "component",
       "component": "elements.link",
-      "repeatable": false
+      "repeatable": true
+    },
+    "copy": {
+      "type": "string"
     }
   },
   "config": {}
