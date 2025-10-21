@@ -16,6 +16,7 @@
     "react-dom": "19.1.0",
     "react-markdown": "^10.1.0",
     "sass": "^1.93.2",
+    "use-debounce": "^10.0.6",
     "zod": "^4.1.12"
   },
   "devDependencies": {

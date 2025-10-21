@@ -139,3 +139,29 @@ export async function getGlobalSettings() {
 	const res = await fetchAPI(url.href, { method: 'GET' })
 	return res.data
 }
+
+export async function getContent(
+	path: string,
+	featured?: boolean,
+	query?: string
+) {
+	const url = new URL(path, BASE_URL)
+
+	url.search = qs.stringify({
+		sort: ['createdAt:desc'],
+		filters: {
+			$or: [
+				{ title: { $containsi: query } },
+				{ description: { $containsi: query } },
+			],
+			...(featured && { featured: { $eq: featured } }),
+		},
+		populate: {
+			image: {
+				fields: ['url', 'alternativeText'],
+			},
+		},
+	})
+
+	return fetchAPI(url.href, { method: 'GET' })
+}
